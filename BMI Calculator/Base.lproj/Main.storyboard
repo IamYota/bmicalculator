@@ -1,24 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKU-fV-FaN">
+                                <rect key="frame" x="20" y="488" width="353" height="50"/>
+                                <color key="backgroundColor" red="0.39861157539999997" green="0.63115108009999998" blue="0.8314009309" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2G5-2U-gIj"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="ボタン"/>
+                                <connections>
+                                    <action selector="button_tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yRX-dZ-f8r"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI計算機" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1n-1f-oxd">
+                                <rect key="frame" x="155.66666666666666" y="79" width="82" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Ef5-zn-hjC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1v-tm-Fr9">
+                                <rect key="frame" x="196.66666666666666" y="442" width="0.0" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="M8s-wY-Yqf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="身長をmで入力してください" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9bo-Gh-gR9">
+                                <rect key="frame" x="20" y="163" width="353" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rPp-we-Qau"/>
+                                </constraints>
+                                <color key="textColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="体重をkgで入力してください" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pzl-r6-L9E">
+                                <rect key="frame" x="20" y="206" width="353" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dIv-XT-pDJ"/>
+                                </constraints>
+                                <color key="textColor" red="0.39861157539999997" green="0.63115108009999998" blue="0.8314009309" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lm6-AD-tFG">
+                                <rect key="frame" x="177" y="417" width="39.333333333333343" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="cs8-Oa-nO7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P1v-tm-Fr9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1qF-Up-sXM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kKU-fV-FaN" secondAttribute="bottom" constant="280" id="68K-pb-vjA"/>
+                            <constraint firstItem="lm6-AD-tFG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HCO-HJ-NfG"/>
+                            <constraint firstItem="pzl-r6-L9E" firstAttribute="top" secondItem="9bo-Gh-gR9" secondAttribute="bottom" constant="13" id="OR3-42-RWz"/>
+                            <constraint firstItem="9bo-Gh-gR9" firstAttribute="top" secondItem="x1n-1f-oxd" secondAttribute="bottom" constant="63" id="PT7-JP-XEi"/>
+                            <constraint firstItem="kKU-fV-FaN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VkX-EQ-ESP"/>
+                            <constraint firstItem="9bo-Gh-gR9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Vtz-0N-e8y"/>
+                            <constraint firstItem="kKU-fV-FaN" firstAttribute="top" secondItem="P1v-tm-Fr9" secondAttribute="bottom" constant="28" id="XOH-vE-M6p"/>
+                            <constraint firstItem="P1v-tm-Fr9" firstAttribute="top" secondItem="lm6-AD-tFG" secondAttribute="bottom" constant="8" id="Xpk-Bh-xSc"/>
+                            <constraint firstItem="P1v-tm-Fr9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cFa-ZZ-BiJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pzl-r6-L9E" secondAttribute="trailing" constant="20" id="eEI-Lc-txb"/>
+                            <constraint firstItem="x1n-1f-oxd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gxF-GN-RAg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9bo-Gh-gR9" secondAttribute="trailing" constant="20" id="hNt-bR-Q1v"/>
+                            <constraint firstItem="x1n-1f-oxd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jQs-Nr-sdr"/>
+                            <constraint firstItem="kKU-fV-FaN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jae-GA-f5K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kKU-fV-FaN" secondAttribute="trailing" constant="20" id="m1b-6a-EfC"/>
+                            <constraint firstItem="pzl-r6-L9E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nLA-Ds-Hvb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bmiLabel" destination="lm6-AD-tFG" id="X4Q-zn-yOK"/>
+                        <outlet property="button" destination="kKU-fV-FaN" id="S8r-Ke-KqS"/>
+                        <outlet property="heightTextField" destination="9bo-Gh-gR9" id="ggN-rh-Tn3"/>
+                        <outlet property="textLabel" destination="P1v-tm-Fr9" id="zwG-ZJ-vaQ"/>
+                        <outlet property="weightTextField" destination="pzl-r6-L9E" id="QYe-X9-jBz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
